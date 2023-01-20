@@ -31,7 +31,7 @@ fun wholeAndFractionCode(binaryCode: String): List<String> {
 fun resultConvertBinaryToDec(wholeBinary: String, fractionBinary: String): Double {
     val powerWhole: Int = wholeBinary.length - 1
     val powerFraction: Int = fractionBinary.length
-    var result= 0.0
+    var result = 0.0
     var flag = 0
     for (i in powerWhole downTo 0) {
         if (wholeBinary[flag] == '1') result += 2.0.pow(i.toDouble())
@@ -39,7 +39,7 @@ fun resultConvertBinaryToDec(wholeBinary: String, fractionBinary: String): Doubl
     }
     flag = 0
     for (i in 1..powerFraction) {
-        if(fractionBinary[flag] == '1') result += 2.0.pow(-i.toDouble())
+        if (fractionBinary[flag] == '1') result += 2.0.pow(-i.toDouble())
         flag++
     }
     return result
